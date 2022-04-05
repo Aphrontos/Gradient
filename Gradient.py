@@ -28,19 +28,18 @@ def generate_frames():
     '''
     
     for G in range(256):
-        img = []
+        image = []
         for R in range(256):
             row = ()
             for B in range(256):
                 color = (R, G, B)
                 row += color
             
-            img.append(row)
+            image.append(row)
         
-        with open(f'results/{G:03}.png', 'wb') as f:
-            w = png.Writer(256, 256, greyscale=False)
-            w.write(f, img)
-        print(f'Generated {G:03}.png')
+        with open(f'results/{G:03}.png', 'wb') as file:
+            writer = png.Writer(256, 256, greyscale=False)
+            writer.write(file, image)
         
 """
 Driscoll M. (2021, June 23) Creating an Animated GIF with Python

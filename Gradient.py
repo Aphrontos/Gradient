@@ -42,7 +42,7 @@ Generate GIF from PNG frames
 
 def generate_gif():
     frames = [Image.open(image) for image in glob.glob("results/*.PNG")]
-    frames += reversed(frames)
+    frames += list(reversed(frames))
     frame_one = frames[0]
     frame_one.save("gradient.gif", format="GIF", append_images=frames,
                save_all=True, duration=8533, loop=0)
@@ -57,18 +57,16 @@ def generate_video():
     image_folder = 'results'
     video_name = 'Gradient.avi'
     
-    images = [img for img in os.listdir(image_folder) if img.endswith(".png")]
-    frame = cv2.imread(os.path.join(image_folder, images[0]))
-    height, width, layers = frame.shape
+    frames = [img for img in os.listdir(image_folder) if img.endswith(".png")]
+    frames += list(reversed(frames))
+    frame_one = cv2.imread(os.path.join(image_folder, frames[0]))
+    height, width, layers = frame_one.shape
     
     # VideoWriter(filename, codec, fps, (width, height))
     video = cv2.VideoWriter(video_name, 0, 60, (width, height))
     
-    for image in images:
-        video.write(cv2.imread(os.path.join(image_folder, image)))
-        
-    for image in reversed(images):
-        video.write(cv2.imread(os.path.join(image_folder, image)))
+    for frame in frames:
+        video.write(cv2.imread(os.path.join(image_folder, frame)))
     
     cv2.destroyAllWindows()
     video.release()

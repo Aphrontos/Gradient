@@ -4,4 +4,4 @@ Gradient of colors with:
 * G - time axis 
 * B - x axis
 
-This is the code to generate the frames
+This is the code used to generate the frames

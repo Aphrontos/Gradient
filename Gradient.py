@@ -41,6 +41,7 @@ def generate_frames():
             w = png.Writer(256, 256, greyscale=False)
             w.write(f, img)
         print(f'Generated {G:03}.png')
+        
 """
 Driscoll M. (2021, June 23) Creating an Animated GIF with Python
     Retrieved April 5 2022, from https://www.blog.pythonlibrary.org/2021/06/23/creating-an-animated-gif-with-python/

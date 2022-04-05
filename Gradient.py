@@ -15,6 +15,8 @@ import shutil
 """
 Gashler M. (2019, April 16) Creating a PNG file in Python
     Retrieved March 20 2022, from https://stackoverflow.com/a/55715162/15043016
+Aggarwal N. (2020, December 29) Create a directory in Python
+    Retrieved April 5 2022, from https://www.geeksforgeeks.org/create-a-directory-in-python/
 Generate the PNG frames and the folder to store them in
 """
 

@@ -50,7 +50,7 @@ def generate_gif():
     frames += reversed(frames)
     frame_one = frames[0]
     frame_one.save("gradient.gif", format="GIF", append_images=frames,
-               save_all=True, duration=4267, loop=0)
+               save_all=True, duration=8533, loop=0)
 
 # BoboDraph (2017, July 6) How to make a movie out of images in python
 #   Retrieved April 5 2022, from https://stackoverflow.com/a/44948030/15043016

@@ -2,7 +2,7 @@
 """
 Created on Tue Apr  5 13:30:10 2022
 
-Generates a representation of the sieve of Euler.
+Generates the frames of a gradient animation
 
 @author: Adíaphoros
 """

@@ -13,9 +13,11 @@ from PIL import Image
 import png #pip install pypng
 import os
 
-# Gashler M. (2019, April 16) Creating a PNG file in Python
-#   Retrieved March 20 2022, from https://stackoverflow.com/a/55715162/15043016
-# Generate the png
+'''
+Gashler M. (2019, April 16) Creating a PNG file in Python
+    Retrieved March 20 2022, from https://stackoverflow.com/a/55715162/15043016
+Generate the png
+'''
 
 def generate_frames():
     
@@ -39,10 +41,11 @@ def generate_frames():
             w = png.Writer(256, 256, greyscale=False)
             w.write(f, img)
         print(f'Generated {G:03}.png')
-
-# Driscoll M. (2021, June 23) Creating an Animated GIF with Python
-#   Retrieved April 5 2022, from https://www.blog.pythonlibrary.org/2021/06/23/creating-an-animated-gif-with-python/
-# Generate GIF from PNG frames
+"""
+Driscoll M. (2021, June 23) Creating an Animated GIF with Python
+    Retrieved April 5 2022, from https://www.blog.pythonlibrary.org/2021/06/23/creating-an-animated-gif-with-python/
+Generate GIF from PNG frames
+"""
 
 def generate_gif():
     frames = [Image.open(image) for image in glob.glob("results/*.PNG")]
@@ -51,9 +54,11 @@ def generate_gif():
     frame_one.save("gradient.gif", format="GIF", append_images=frames,
                save_all=True, duration=8533, loop=0)
 
-# BoboDraph (2017, July 6) How to make a movie out of images in python
-#   Retrieved April 5 2022, from https://stackoverflow.com/a/44948030/15043016
-# Generate video from PNG frames
+"""
+BoboDraph (2017, July 6) How to make a movie out of images in python
+    Retrieved April 5 2022, from https://stackoverflow.com/a/44948030/15043016
+Generate video from PNG frames
+"""
 
 def generate_video():
     image_folder = 'results'

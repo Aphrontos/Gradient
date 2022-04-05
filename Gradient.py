@@ -2,7 +2,7 @@
 """
 Created on Tue Apr  5 13:30:10 2022
 
-Generates the frames of a gradient animation
+Generates a seamlessly looping animation of a gradient
 
 @author: Adíaphoros
 """
@@ -47,6 +47,7 @@ def generate_frames():
 
 def generate_gif():
     frames = [Image.open(image) for image in glob.glob("results/*.PNG")]
+    frames += reversed(frames)
     frame_one = frames[0]
     frame_one.save("gradient.gif", format="GIF", append_images=frames,
                save_all=True, duration=4267, loop=0)
@@ -67,6 +68,9 @@ def generate_video():
     video = cv2.VideoWriter(video_name, 0, 60, (width, height))
     
     for image in images:
+        video.write(cv2.imread(os.path.join(image_folder, image)))
+        
+    for image in reversed(images):
         video.write(cv2.imread(os.path.join(image_folder, image)))
     
     cv2.destroyAllWindows()

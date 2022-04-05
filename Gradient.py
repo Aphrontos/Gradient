@@ -14,7 +14,7 @@ import png #pip install pypng
 import os
 
 # Gashler M. (2019, April 16) Creating a PNG file in Python
-#	Retrieved March 20 2022, from https://stackoverflow.com/a/55715162/15043016
+#   Retrieved March 20 2022, from https://stackoverflow.com/a/55715162/15043016
 # Generate the png
 
 def generate_frames():

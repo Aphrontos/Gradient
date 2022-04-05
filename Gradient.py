@@ -71,12 +71,30 @@ def generate_video():
     cv2.destroyAllWindows()
     video.release()
 
+"""
+Tripathi A. (2017, March 7) How do I delete a file or folder in Python?
+    Retrieved April 5 2022, from https://stackoverflow.com/a/42641792/15043016
+Delete the PNG frames and the folder
+"""
+
+def delete_frames():
+    
+    # Try to remove tree; 
+    # if failed, show an error using try...except on screen
+    try:
+        shutil.rmtree('results')
+    except OSError as e:
+        print ("Error: %s - %s." % (e.filename, e.strerror))
+
 def main():
     generate_frames()
     print("Generated the frames")
     
     generate_video()
     print("Generated the video")
+    
+    delete_frames()
+    print("Deleted the frames")
     
 if __name__ == "__main__":
     main()

@@ -38,7 +38,7 @@ def generate_frames():
         with open(f'results/{G:03}.png', 'wb') as f:
             w = png.Writer(256, 256, greyscale=False)
             w.write(f, img)
-        print(f'Generated {G:X}.png')
+        print(f'Generated {G:03}.png')
 
 
 # Driscoll M. (2021, June 23) Creating an Animated GIF with Python

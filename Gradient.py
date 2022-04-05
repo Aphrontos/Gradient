@@ -20,14 +20,7 @@ Generate the png
 '''
 
 def generate_frames():
-    
-    '''
-    R = Red value
-    G = Green value
-    G = Blue value
-    '''
-    
-    for G in range(256):
+   for G in range(256):
         image = []
         for R in range(256):
             row = ()

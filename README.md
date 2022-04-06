@@ -13,7 +13,7 @@ This code:
 1. Create a folder
 2. Place gradient.py in the folder
 3. Make sure opencv is installed in the conda environment
-4. Run gradient.py in Spyder or any other IDE 
+4. Run gradient.py in Spyder or PyCharm 
 
 # References
 

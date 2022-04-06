@@ -12,7 +12,8 @@ This code:
 # Usage
 1. Create a folder
 2. place gradient.py in the folder
-3. run in command prompt    python gradient.py
+3. run in command prompt:
+    python gradient.py
 
 # References
 

@@ -8,7 +8,7 @@ Generates a seamlessly looping animation of a gradient
 import cv2 #pip install opencv
 import glob
 from PIL import Image
-import png #pip install pypng
+import numpy
 import os
 import shutil
 
@@ -29,16 +29,13 @@ def generate_frames():
     for G in range(256):
         image = []
         for R in range(256):
-            row = ()
+            row = []
             for B in range(256):
-                color = (R, G, B)
-                row += color
-            
-            image.append(row)
-        
-        with open(f'results/{G:03}.png', 'wb') as file:
-            writer = png.Writer(256, 256, greyscale=False)
-            writer.write(file, image)
+                color = [R, G, B]
+                row.append(color)
+            image.append(row) # this needs to be n * n * 3 array
+        image = numpy.array(image)
+        cv2.imwrite(f'results/{G:03}.png', image)
         
 """
 Driscoll M. (2021, June 23) Creating an Animated GIF with Python
@@ -68,6 +65,7 @@ def generate_video():
               for image in os.listdir('results') 
               if image.endswith(".png")]
     frames += list(reversed(frames))
+    frames = numpy.array(frames)
     frame_one = frames[0]
     height, width, layers = frame_one.shape
     

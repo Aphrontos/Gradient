@@ -1,8 +1,8 @@
 # Gradient
 Gradient of colors with: 
-* R - y axis 
-* G - time axis 
-* B - x axis
+* R as the x axis 
+* G as the time axis 
+* B as the y axis
 
 This code:
 * generates the frames in a folder

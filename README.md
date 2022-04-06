@@ -9,6 +9,11 @@ This code:
 * strings them together into a video or a GIF
 * deletes the frames and the folder
 
+# Usage
+1. Create a folder
+2. place gradient.py in the folder
+3. run in command prompt    python gradient.py
+
 # References
 
 Aggarwal N. (2020, December 29) Create a directory in Python

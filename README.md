@@ -11,8 +11,9 @@ This code:
 
 # Usage
 1. Create a folder
-2. place gradient.py in the folder
-3. run in command prompt:
+2. Place gradient.py in the folder
+3. Make sure opencv is installed in the environment
+4. Run the following in command prompt:
 
        python gradient.py
 

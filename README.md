@@ -14,7 +14,7 @@ This code:
 2. place gradient.py in the folder
 3. run in command prompt:
 
-    python gradient.py
+       python gradient.py
 
 # References
 
